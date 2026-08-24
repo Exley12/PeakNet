@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peaknet"
+version = "0.1.1"
+description = "1D spectral peak denoising network"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "onnxruntime",
+]
+
+[project.optional-dependencies]
+dev = [
+    "torch",
+    "onnx",
+    "onnxscript",
+]
+
+[tool.setuptools]
+packages = ["peaknet"]
+
+[tool.setuptools.package-dir]
+"peaknet" = "peaknet_dev"
+
+[tool.setuptools.package-data]
+peaknet = ["*.onnx", "*.onnx.data"]

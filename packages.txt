@@ -1,0 +1,41 @@
+# Core numerics & data handling
+numpy
+scipy
+pandas
+numba
+
+# Machine learning / AI
+torch
+torchvision
+torchaudio
+scikit-learn
+
+# Plotting & visualisation
+matplotlib
+seaborn
+tqdm
+plotly
+
+# Signal & spectral analysis
+peakutils
+pywavelets
+
+# App / interface (optional)
+streamlit
+jupyter
+ipython
+notebook
+
+# File IO & utilities
+h5py
+pyyaml
+opencv-python
+imageio
+
+# Testing / environment
+pytest
+black
+isort
+
+# Optional: GPU / performance
+cupy-cuda12x; platform_system == "Linux"
