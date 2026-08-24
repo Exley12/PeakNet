@@ -2,40 +2,21 @@
 numpy
 scipy
 pandas
-numba
 
 # Machine learning / AI
 torch
-torchvision
-torchaudio
-scikit-learn
 
 # Plotting & visualisation
 matplotlib
-seaborn
 tqdm
-plotly
 
-# Signal & spectral analysis
-peakutils
-pywavelets
+# Inference
+onnxruntime
 
-# App / interface (optional)
-streamlit
+# Dev / interactive tooling (not imported in source, used as CLI/notebooks)
 jupyter
 ipython
 notebook
-
-# File IO & utilities
-h5py
-pyyaml
-opencv-python
-imageio
-
-# Testing / environment
 pytest
 black
 isort
-
-# Optional: GPU / performance
-cupy-cuda12x; platform_system == "Linux"
