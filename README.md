@@ -3,8 +3,7 @@ Convert your noisey spectra into a nice clean spectra today!
 Just import peaknet then use clean_spectra = peaknet(spectra) and you will have a nice clean spectra.
 
 Note the spectra must be a 1D array of length L where L is the length and 10 < L < 4096.
-Also the spectra must be normalised i.e max value of 1 (in fact the current model was trained on spectra where the 
-maximum peak value was 0.85)
+Also the spectra must be normalised i.e max value of 1 (in fact the current model was trained on spectra where the maximum peak value was 0.85)
 It could be a list, numpy array, tuple, tensor...
 
 ## Example
