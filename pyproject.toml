@@ -8,7 +8,7 @@ version = "0.1.1"
 description = "1D spectral peak denoising network"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
+license = {text = "MIT"}
 license-files = ["LICENSE"]
 authors = [
     { name = "Exley12", email = "matthewaexley@gmail.com" },
