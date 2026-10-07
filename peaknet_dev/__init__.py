@@ -17,6 +17,13 @@ def _predict(spectrum):
     # Model only handles 1D input
     if spectrum.ndim != 1:
         raise ValueError("Expected 1D spectrum")
+
+    # Normalise the spectrum
+    spec_max = spectrum.max()
+    if not np.isfinite(spec_max) or spec_max <= 0:
+        raise ValueError("Spectrum must have a finite positive maximum")
+    spectrum = spectrum / spec_max
+
     # Clip to the range the model was trained on
     spectrum = np.clip(spectrum, -0.2, 1.0)
     # Pad with zeros either side for better edge performance
@@ -28,6 +35,10 @@ def _predict(spectrum):
     pred = _SESSION.run([_OUTPUT_NAME], {_INPUT_NAME: x})[0].squeeze()
     # Crop the padded borders — output is already in [0, 1] from Sigmoid
     pred = pred[pad:-pad]
+
+    # Scale back 
+    pred = pred * spec_max
+
     return pred
 
 # Inherit from the module's metaclass to customize module behavior
